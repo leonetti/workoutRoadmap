@@ -1,13 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+// import PropTypes from 'prop-types';
 
-export default function Home({ data }) {
-  return (
-    <div>
-      {data.site.siteMetadata.title}
-    </div>
-  );
-}
+const Home = () => (
+  <div>
+    {/* {data.site.siteMetadata.title} */}
+    <Link to="/account">Go to your account</Link>
+  </div>
+);
 
 export const query = graphql`
   query {
@@ -18,3 +18,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Home;
